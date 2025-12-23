@@ -113,19 +113,19 @@ export default function Products() {
   ];
 
   return (
-    <section id="products" className="py-20 bg-white">
+    <section id="products" className="py-20 bg-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Product Range</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Our Product Range</h2>
+          <p className="text-lg text-slate-300 max-w-3xl mx-auto">
             Comprehensive range of flour milling machinery designed for various applications and capacities
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {products.map((product, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="h-48 overflow-hidden bg-gray-200">
+            <div key={index} className="bg-slate-800 rounded-lg overflow-hidden border border-amber-400/10 hover:border-amber-400/30 transition-colors">
+              <div className="h-48 overflow-hidden bg-slate-700">
                 <img
                   src={product.image}
                   alt={product.name}
@@ -133,12 +133,12 @@ export default function Products() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{product.name}</h3>
-                <p className="text-red-900 font-semibold mb-4">{product.motor}</p>
+                <h3 className="text-lg font-bold text-white mb-1">{product.name}</h3>
+                <p className="text-amber-400 font-semibold text-sm mb-4">{product.motor}</p>
                 <ul className="space-y-2">
                   {product.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start text-sm text-gray-700">
-                      <Check className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                    <li key={idx} className="flex items-start text-xs text-slate-300">
+                      <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -148,47 +148,47 @@ export default function Products() {
           ))}
         </div>
 
-        <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-8 md:p-12">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg p-8 border border-amber-400/10 md:p-12">
+          <h3 className="text-3xl font-bold text-white mb-8 text-center">
             Grinding Capacity Per Hour (Approx)
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {grindingCapacity.map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                <h4 className="text-lg font-bold text-red-900 mb-2">{item.grain}</h4>
-                <p className="text-gray-700">{item.capacity}</p>
+              <div key={index} className="bg-slate-700/50 p-4 rounded-lg border border-amber-400/10">
+                <h4 className="text-base font-semibold text-amber-400 mb-2">{item.grain}</h4>
+                <p className="text-slate-300 text-sm">{item.capacity}</p>
               </div>
             ))}
           </div>
-          <div className="mt-8 p-6 bg-red-900 text-white rounded-lg">
-            <h4 className="text-xl font-bold mb-3">Multipurpose Use For:</h4>
-            <div className="grid md:grid-cols-2 gap-3 text-sm">
+          <div className="mt-8 p-6 bg-slate-800 border border-amber-400/20 rounded-lg">
+            <h4 className="text-lg font-bold text-amber-400 mb-3">Multipurpose Use For:</h4>
+            <div className="grid md:grid-cols-2 gap-3 text-sm text-slate-300">
               <div className="flex items-center">
-                <Check className="w-5 h-5 mr-2" />
+                <Check className="w-4 h-4 text-amber-400 mr-2" />
                 <span>Hotel & Restaurant</span>
               </div>
               <div className="flex items-center">
-                <Check className="w-5 h-5 mr-2" />
+                <Check className="w-4 h-4 text-amber-400 mr-2" />
                 <span>Catering Services</span>
               </div>
               <div className="flex items-center">
-                <Check className="w-5 h-5 mr-2" />
+                <Check className="w-4 h-4 text-amber-400 mr-2" />
                 <span>Masala Industries</span>
               </div>
               <div className="flex items-center">
-                <Check className="w-5 h-5 mr-2" />
+                <Check className="w-4 h-4 text-amber-400 mr-2" />
                 <span>Chemical Industries</span>
               </div>
               <div className="flex items-center">
-                <Check className="w-5 h-5 mr-2" />
+                <Check className="w-4 h-4 text-amber-400 mr-2" />
                 <span>Pharmaceuticals</span>
               </div>
               <div className="flex items-center">
-                <Check className="w-5 h-5 mr-2" />
+                <Check className="w-4 h-4 text-amber-400 mr-2" />
                 <span>Ayurvedic Manufacturing</span>
               </div>
               <div className="flex items-center">
-                <Check className="w-5 h-5 mr-2" />
+                <Check className="w-4 h-4 text-amber-400 mr-2" />
                 <span>Gruh Udyog (Home Industries)</span>
               </div>
             </div>
